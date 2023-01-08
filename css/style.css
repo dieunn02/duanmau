@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+.boxcenter{
+    width: 60%;
+    margin: 0 auto;  
+}
+.row{
+    float: left;
+    width: 100%;
+}
+.mb{
+    margin-bottom: 20px;
+}
+.mr{
+    margin-right: 2% ;
+}
+.demo{
+    background: whitesmoke;
+    min-height: 100px;
+}
+.header{
+    background: greenyellow;
+    border-radius: 5px;
+    border: 1px solid grey;
+    color: white;
+    font-size: 1vw;
+}
+.header h1{
+    margin: 10px 20px;
+}
+.menu{
+    background: rgb(199, 203, 191);
+    border-radius: 5px;
+    border: 1px solid rgb(202, 138, 49);
+    color: white;
+    font-size: 1vw;
+}
+.footer{
+    background: rgb(28, 40, 11);
+    border-radius: 5px;
+    border: 1px solid rgb(14, 232, 145);
+    color: white;
+    font-size: 0.8vw;
+    padding: 20px;
+}
+.boxtrai{
+    float: left;
+    width: 74%;
+}
+.boxphai{
+    float: left;
+    width: 24%;
+}
+.boxtitle{
+    padding: 10px;
+    background-color: aqua;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: 1px #ccc solid;
+    border-right: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+}
+.boxcontent{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-height: 200px;
+}
+.boxcontent2{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray; 
+    min-height: 200px;
+}
+.boxfooter{
+    padding: 10px;
+    background-color: rgb(193, 203, 203);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px #ccc solid;
+}
+.banner{
+max-height: 300px;
+width: 90%;
+}
+.banner img{
+    /* height: 300px; */
+    text-align: center;
+    width: 90%;
+}
+.boxsp{
+    float: left;
+    width: 32%;
+    min-height: 300px;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.boxsp img{
+
+}
