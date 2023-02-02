@@ -8,7 +8,7 @@
         <h1>CẬP NHẬT LOẠI HÀNG HÓA</h1>
     </div>
     <div class="row formcontent">
-        <form action="index.php?act=adddm" method="post">
+        <form action="index.php?act=updatedm" method="post">
             <div class="row mb10"> Mã Loại<br>
                 <input type="text" name="maloai" disabled>
             </div>
@@ -16,8 +16,8 @@
                 <input type="text" name="tenloai" value="<?php if(isset($name) && ($name != "")) echo $name ; ?>">
             </div>
             <div class="row mb10">
-
-                <input type="submit" name="themmoi" value="Cập Nhật">
+                <input type="hidden" name="id" value="<?php if(isset($id) && ($id > 0)) echo $name ; ?>">
+                <input type="submit" name="capnhat" value="Cập Nhật">
                 <input type="reset" value="Nhập Lại">
                 <a href="index.php?act=listdm">
                     <input type="button" value="Danh Sách">
