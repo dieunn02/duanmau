@@ -1,6 +1,8 @@
 <?php
 include "../model/pdo.php";
 include "../model/danhmuc.php";
+include "../model/sanpham.php";
+
 include "header.php";
 //controller
 if(isset($_GET['act'])){
@@ -12,14 +14,14 @@ if(isset($_GET['act'])){
             if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
                 $tenloai = $_POST['tenloai'];
                 insert_danhmuc($tenloai);
-                $thongbao = 'Them Thanh Cong';         
+                $thongbao = 'Thêm thành công';         
             }
             include "danhmuc/add.php";
             break;
          // 
         case 'listdm':
             $listdanhmuc = loadall_danhmuc();
-            include "danhmuc/listdm.php";
+            include "danhmuc/list.php";
             break;
         // 
         case 'xoadm':
@@ -27,7 +29,7 @@ if(isset($_GET['act'])){
                 delete_danhmuc($_GET['id']);
             }
             $listdanhmuc = loadall_danhmuc();
-            include "danhmuc/listdm.php";
+            include "danhmuc/list.php";
             break;
         // 
         case 'suadm':
@@ -45,13 +47,15 @@ if(isset($_GET['act'])){
                 $thongbao = 'Cập Nhật Thành Công';         
             }
             $listdanhmuc = loadall_danhmuc();
-            include "danhmuc/listdm.php";
+            include "danhmuc/list.php";
             break;
         // SẢN PHẨM
         case 'addsp':
             //check click nut add hay khong
             if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
-                $tenloai = $_POST['tenloai'];
+                $tensp = $_POST['tensp'];
+                $giasp = $_POST['giasp'];
+                $mota = $_POST['mota'];
                 insert_sanpham($tenloai);
                 $thongbao = 'Thêm thành công';         
             }
@@ -60,7 +64,7 @@ if(isset($_GET['act'])){
          // 
         case 'listsp':
             $listsanpham = loadall_sanpham();
-            include "sanpham/listsp.php";
+            include "sanpham/list.php";
             break;
         // 
         case 'xoasp':
@@ -68,7 +72,7 @@ if(isset($_GET['act'])){
                 delete_sanpham($_GET['id']);
             }
             $listsanpham = loadall_sanpham();
-            include "sanpham/listsp.php";
+            include "sanpham/list.php";
             break;
         // 
         case 'suasp':
@@ -86,7 +90,7 @@ if(isset($_GET['act'])){
                 $thongbao = 'Cập Nhật Thành Công';         
             }
             $listsanpham = loadall_sanpham();
-            include "sanpham/listdm.php";
+            include "sanpham/list.php";
             break;
         default:
             include "home.php";

@@ -30,11 +30,11 @@
             </table>
         </div>
         <div class="row mb10">
-            <input type="button" value="Chon tat ca">
-            <input type="button" value="Bo chon tat ca ">
-            <input type="button" value="Xoa cac muc da chon">
+            <input type="button" value="Chọn tất cả">
+            <input type="button" value="Bỏ chọn tất cả">
+            <input type=" button" value="Xóa các mục đã chọn">
             <a href="index.php?act=adddm">
-                <input type="button" value="Nhap them">
+                <input type="button" value="Nhập thêm">
             </a>
         </div>
         </form>
