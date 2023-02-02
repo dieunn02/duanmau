@@ -2,6 +2,7 @@
 include 'model/pdo.php';
 include 'model/sanpham.php';
 include 'view/header.php';
+include 'global.php';
 $spnew = loadall_sanpham_home();
 if((isset($_GET['act'])) && ($_GET['act']!= "")){
     $act = $_GET['act'];
