@@ -89,7 +89,7 @@ if(isset($_GET['act'])){
             if(isset($_GET['id']) && ($_GET['id'] >0 )){
                 delete_sanpham($_GET['id']);
             }
-            $listsanpham = loadall_sanpham();
+            $listsanpham = loadall_sanpham("",0);
             include "sanpham/list.php";
             break;
         // 
@@ -107,7 +107,7 @@ if(isset($_GET['act'])){
                 update_sanpham($id,$tenloai);
                 $thongbao = 'Cập Nhật Thành Công';         
             }
-            $listsanpham = loadall_sanpham();
+            $listsanpham = loadall_sanpham("",0);
             include "sanpham/list.php";
             break;
         default:

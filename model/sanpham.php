@@ -4,7 +4,7 @@ function insert_sanpham($tensp,$giasp,$hinh,$mota,$iddm){
     pdo_execute($sql);
 }
 function delete_sanpham($id){
-    $sql = "DELETE FROM WHERE id=" .$id;
+    $sql = "DELETE FROM sanpham WHERE id=" .$id;
     pdo_execute($sql);
 }
 function loadall_sanpham( $kyw,$iddm){
