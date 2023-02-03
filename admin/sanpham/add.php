@@ -4,10 +4,17 @@
     </div>
     <div class="row formcontent">
         <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
-            <div class="row mb10"> Mã sản phẩm<br>
-                <input type="text" name="maspi" disabled>
+            <div class="row mb10">Danh mục<br>
+                <select name="iddm">
+                    <?php 
+                    foreach ( $listdanhmuc as $danhmuc) {
+                        extract($danhmuc);
+                        echo ' <option value="'.$id.'">'.$name.'</option>';
+                    }
+                    ?>
+                </select>
             </div>
-            <div class="row mb10"> Tên sản phẩm<br>
+            <div class=" row mb10"> Tên sản phẩm<br>
                 <input type="text" name="tensp">
             </div>
             <div class="row mb10">Giá<br>

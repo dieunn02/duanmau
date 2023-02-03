@@ -53,17 +53,35 @@ if(isset($_GET['act'])){
         case 'addsp':
             //check click nut add hay khong
             if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
+                $iddm = $_POST['iddm'];
                 $tensp = $_POST['tensp'];
                 $giasp = $_POST['giasp'];
                 $mota = $_POST['mota'];
-                insert_sanpham($tenloai);
+                $hinh = $_FILES['hinh']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
+                if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+                    // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                } else {
+                    // echo "Sorry, there was an error uploading your file.";
+                }
+                insert_sanpham($tensp,$giasp,$hinh,$mota,$iddm);
                 $thongbao = 'Thêm thành công';         
             }
+            $listdanhmuc = loadall_danhmuc();
             include "sanpham/add.php";
             break;
          // 
         case 'listsp':
-            $listsanpham = loadall_sanpham();
+            if(isset($_POST['listok']) && ($_POST['listok'])){
+                $kyw=$_POST['kyw'];
+                $iddm = $_POST['iddm'];
+            }else{
+                $kyw=' ';
+                $iddm = 0;
+            }
+            $listdanhmuc = loadall_danhmuc();
+            $listsanpham = loadall_sanpham( $kyw,$iddm);
             include "sanpham/list.php";
             break;
         // 
