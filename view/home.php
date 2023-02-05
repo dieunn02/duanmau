@@ -39,86 +39,26 @@
             </div>
         </div>
         <div class="row">
-            <?php
-            $i=0;
-            foreach ($spnew as $sp) {
-                extract($sp);
-                if(($i=2) || ($i=5) || ($i=8)){
-                    $mr = "";
-                }else {
-                    $mr = "mr";
-                }
-                $hinh=$img_path.$img;
-                echo '<div class="boxsp '.$mr.' ">
-                <div class="img">
-                    <img src="" alt="'.$hinh.'">
-                </div>
-                <p>'.$price.'</p>
-                <a href="#">'.$name.'</a>
-            </div>';
-            $i+=1;
-            }
-             ?>
-            <!-- <div class="boxsp mr">
-                <div class="img">
-                    <img src="https://i.pinimg.com/236x/01/f9/07/01f907c0bd8294b5e04f4068bd7f18f5.jpg" alt="">
-                </div>
-                <p>$30</p>
-                <a href="#">Chanh</a>
-            </div>
-            <div class="boxsp mr">
-                <div class="img">
-                    <img src="https://i.pinimg.com/236x/01/f9/07/01f907c0bd8294b5e04f4068bd7f18f5.jpg" alt="">
-                </div>
-                <p>$30</p>
-                <a href="#">Chanh</a>
-            </div>
-            <div class="boxsp ">
-                <div class="img">
-                    <img src="https://i.pinimg.com/236x/01/f9/07/01f907c0bd8294b5e04f4068bd7f18f5.jpg" alt="">
-                </div>
-                <p>$30</p>
-                <a href="#">Chanh</a>
-            </div>
-            <div class="boxsp mr">
-                <div class="img">
-                    <img src="https://i.pinimg.com/236x/01/f9/07/01f907c0bd8294b5e04f4068bd7f18f5.jpg" alt="">
-                </div>
-                <p>$30</p>
-                <a href="#">Chanh</a>
-            </div>
-            <div class="boxsp mr">
-                <div class="img">
-                    <img src="https://i.pinimg.com/236x/01/f9/07/01f907c0bd8294b5e04f4068bd7f18f5.jpg" alt="">
-                </div>
-                <p>$30</p>
-                <a href="#">Chanh</a>
-            </div>
-            <div class="boxsp ">
-                <div class="img">
-                    <img src="https://i.pinimg.com/236x/01/f9/07/01f907c0bd8294b5e04f4068bd7f18f5.jpg" alt="">
-                </div>
-                <p>$30</p>
-                <a href="#">Chanh</a>
-            </div>
-            <div class="boxsp mr">
-                <div class="img"><img src="https://i.pinimg.com/236x/01/f9/07/01f907c0bd8294b5e04f4068bd7f18f5.jpg"
-                        alt=""></div>
-                <p>$30</p>
-                <a href="#">Chanh</a>
-            </div>
-            <div class="boxsp mr">
-                <div class="img"><img src="https://i.pinimg.com/236x/01/f9/07/01f907c0bd8294b5e04f4068bd7f18f5.jpg"
-                        alt=""></div>
-                <p>$30</p>
-                <a href="#">Chanh</a>
-            </div>
-            <div class="boxsp ">
-            <div class="img"> <img src="https://i.pinimg.com/236x/01/f9/07/01f907c0bd8294b5e04f4068bd7f18f5.jpg" alt="">
-            </div>
-            <p>$30</p>
-            <a href="#">Chanh</a>
-        </div> -->
+            <!-- <?php
+            // $i=0;
+            // foreach ($spnew as $sp) {
+            //     extract($sp);
+            //     if(($i=2) || ($i=5) || ($i=8)){
+            //         $mr = "";
+            //     }else {
+            //         $mr = "mr";
+            //     }
+            //     $hinh=$img_path.$img;
+            //     echo '<div class="boxsp '.$mr.' ">
+            //     <div class="img">
+            //         <img src="" alt="'.$hinh.'">
+            //     </div>
+            //     <p>'.$price.'</p>
+            //     <a href="#">'.$name.'</a>
+            // </div>';
+            // $i+=1;
+            // }
+             ?> -->
         </div>
     </div>
     <div class="boxphai">

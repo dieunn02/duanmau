@@ -1,6 +1,6 @@
 <div class="row">
     <div class="row formtitle mb">
-        <h1>Quản lý hàng hóa</h1>
+        <h1>Danh sách sản phẩm</h1>
     </div>
     <form action="index.php?act=listsp" method="post">
         <input type="text" name="kyw" value="">
@@ -48,6 +48,7 @@
                         <td>
                             <a href="'.$suasp.'"><input type="button" value="Sửa"></a>    
                             <a href="'.$xoasp.'"><input type="button" value="Xóa"></a>  
+                            
                         </td>
                     </tr>';
                     }

@@ -7,13 +7,13 @@ function delete_sanpham($id){
     $sql = "DELETE FROM sanpham WHERE id=" .$id;
     pdo_execute($sql);
 }
-function loadall_sanpham( $kyw,$iddm){
+function loadall_sanpham(){
     $sql = "SELECT * FROM sanpham WHERE 1 " ; 
     if($kyw != "" ){
-        $sql .= "  and name like ' % ".$kyw." % ' "; 
+        $sql .= "  and name like '%".$kyw."%'"; 
     }
     if($iddm > 0 ){
-        $sql .= "  and iddm = ' ".$iddm." ' "; 
+        $sql .= "  and iddm = '".$iddm."'"; 
     }
     $sql .="  ORDER BY id DESC "; //nối chuỗi .= cachkhoangdoi  "
     $listsanpham =  pdo_query($sql);
@@ -24,8 +24,11 @@ function loadone_sanpham($id){
     $dm = pdo_query_one($sql);
     return $dm;
 }
-function update_sanpham($id,$tenloai){
-    $sql = "UPDATE sanpham SET name='".$tenloai."' WHERE id=".$id;
+function update_sanpham($id,$iddm,$tensp,$giasp,$mota,$hinh){
+    if($hinh!="")
+        $sql = "UPDATE sanpham SET iddm='".$iddm."' , name='".$tensp."' , price='".$giasp."' ,mota='".$mota."' ,img='".$hinh."' ,  WHERE id=".$id;
+    else
+        $sql = "UPDATE sanpham SET iddm='".$iddm."' ,  name='".$tensp."' , price='".$giasp."' ,mota='".$mota."'  WHERE id=".$id;
     pdo_execute($sql);
 }
 ?>
