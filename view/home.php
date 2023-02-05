@@ -87,12 +87,19 @@
             <div class="boxtitle">DANH MUC</div>
             <div class="boxcontent2 menudoc">
                 <ul>
+                    <?php 
+                    foreach ($dsdm as $dm) { 
+                        extract($dm);
+                        $linkdm = "index.php?act=sanpham&iddm=".$id;
+                        echo '<li><a href=" '.$linkdm.' ">'.$name.'</a></li>';
+                    }
+?>
+                    <!-- <li><a href="#">Dong Ho</a></li>
                     <li><a href="#">Dong Ho</a></li>
                     <li><a href="#">Dong Ho</a></li>
                     <li><a href="#">Dong Ho</a></li>
                     <li><a href="#">Dong Ho</a></li>
-                    <li><a href="#">Dong Ho</a></li>
-                    <li><a href="#">Dong Ho</a></li>
+                    <li><a href="#">Dong Ho</a></li> -->
                 </ul>
             </div>
             <div class="boxfooter searchbox">
