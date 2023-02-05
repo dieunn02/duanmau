@@ -4,7 +4,6 @@
             <div class="banner">
                 <!-- Slideshow container -->
                 <div class="slideshow-container">
-
                     <!-- Full-width images with number and caption text -->
                     <div class="mySlides fade">
                         <div class="numbertext">1 / 3</div>
@@ -39,26 +38,25 @@
             </div>
         </div>
         <div class="row">
-            <!-- <?php
-            // $i=0;
-            // foreach ($spnew as $sp) {
-            //     extract($sp);
-            //     if(($i=2) || ($i=5) || ($i=8)){
-            //         $mr = "";
-            //     }else {
-            //         $mr = "mr";
-            //     }
-            //     $hinh=$img_path.$img;
-            //     echo '<div class="boxsp '.$mr.' ">
-            //     <div class="img">
-            //         <img src="" alt="'.$hinh.'">
-            //     </div>
-            //     <p>'.$price.'</p>
-            //     <a href="#">'.$name.'</a>
-            // </div>';
-            // $i+=1;
-            // }
-             ?> -->
+            <?php
+            $i=0;
+            foreach ($spnew as $sp) {
+                extract($sp);                $hinh=$img_path.$img;
+                if(($i==2) || ($i==5) || ($i==8)){
+                    $mr = "";
+                }else {
+                    $mr = "mr";
+                }
+                echo '<div class="boxsp '.$mr.' ">
+                <div class="img">
+                    <img src=" '.$hinh.' " alt="">
+                </div>
+               <p>'.$price.'</p>
+               <a href="#">'.$name.'</a>
+        </div>';
+            $i+=1;
+            }
+         ?>
         </div>
     </div>
     <div class="boxphai">
@@ -134,23 +132,8 @@
                     <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
                     <a href="#">Dua Hau</a>
                 </div>
-                <div class="row mb10 top10">
-                    <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
-                    <a href="#">Dua Hau</a>
-                </div>
-                <div class="row mb10 top10">
-                    <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
-                    <a href="#">Dua Hau</a>
-                </div>
-                <div class="row mb10 top10">
-                    <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
-                    <a href="#">Dua Hau</a>
-                </div>
-                <div class="row mb10 top10">
-                    <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
-                    <a href="#">Dua Hau</a>
-                </div>
             </div>
         </div>
     </div>
+</div>
 </div>
