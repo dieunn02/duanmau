@@ -31,8 +31,8 @@ function loadall_sanpham($kyw="",$iddm=0){
 }
 function loadone_sanpham($id){
     $sql = "SELECT * FROM sanpham WHERE id=".$id;
-    $dm = pdo_query_one($sql);
-    return $dm;
+    $sp = pdo_query_one($sql);
+    return $sp;
 }
 function update_sanpham($id,$iddm,$tensp,$giasp,$mota,$hinh){
     if($hinh!="")

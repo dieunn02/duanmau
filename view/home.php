@@ -41,18 +41,20 @@
             <?php
             $i=0;
             foreach ($spnew as $sp) {
-                extract($sp);                $hinh=$img_path.$img;
+                extract($sp);   
+                $linksp = "index.php?act=sanphamct&idsp=" . $id;
+                $hinh=$img_path.$img;
                 if(($i==2) || ($i==5) || ($i==8)){
                     $mr = "";
                 }else {
                     $mr = "mr";
                 }
                 echo '<div class="boxsp '.$mr.' ">
-                <div class="img">
-                    <img src=" '.$hinh.' " alt="">
+                <div class="row img">
+                    <a href=" '.$linksp.' "><img src=" '.$hinh.' " alt=""></a>       
                 </div>
                <p>'.$price.'</p>
-               <a href="#">'.$name.'</a>
+               <a href=" '.$linksp.' ">'.$name.'</a>
         </div>';
             $i+=1;
             }
@@ -60,69 +62,7 @@
         </div>
     </div>
     <div class="boxphai">
-        <div class="row mb">
-            <div class="boxtitle">TAi KHOAN</div>
-            <div class="boxcontent formtaikhoan">
-                <form action="#" method="post">
-                    <div class="row mb">
-                        Ten dang nhap : <br>
-                        <input type="text" name="user" id="">
-                    </div>
-                    <div class="row mb">
-                        Mat khau : <br>
-                        <input type="password" name="pass" id="">
-                    </div>
-                    <div class="row mb">
-                        <input type="checkbox" name="" id="">Ghi nho tai khoan ?
-                    </div>
-                    <div class="row mb">
-                        <input type="submit" value="Dang Nhap">
-                    </div>
-                </form>
-                <li><a href="#">Quen Mat Khau</a></li>
-                <li><a href="#">Dang Ki thanh vien</a></li>
-            </div>
-        </div>
-        <div class="row mb">
-            <div class="boxtitle">DANH MUC</div>
-            <div class="boxcontent2 menudoc">
-                <ul>
-                    <?php 
-                    foreach ($dsdm as $dm) { 
-                        extract($dm);
-                        $linkdm = "index.php?act=sanpham&iddm=".$id;
-                        echo '<li><a href=" '.$linkdm.' ">'.$name.'</a></li>';
-                    }
-?>
-                </ul>
-            </div>
-            <div class="boxfooter searchbox">
-                <form action="#" method="post">
-                    <input type="text">
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="boxtitle">TOP 10 YEU THICH</div>
-            <div class="row boxcontent">
-                <?php
-                foreach ($dstop10 as $sp) {
-                    extract($sp);
-                    $linksp="index.php?act=sanphamct&idsp=".$id;
-                    $img = $img_path.$img;
-                    echo '<div class="row mb10 top10">
-                    <img src=" '.$img.' " alt="">
-                    <a href=" '.$linksp.' ">'.$name.'</a>
-                </div>';
-                }
-                ?>
-                <!-- <div class="row mb10 top10">
-                    <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
-                    <a href="#">Dua Hau</a>
-                </div>
-                -->
-            </div>
-        </div>
+        <?php  include "boxright.php" ; ?>
     </div>
 </div>
 </div>

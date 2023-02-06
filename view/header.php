@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dự Án Mẫu</title>
-    <link rel="../view/css/style.css" type="" href="">
+    <link rel="stylesheet" href="../view/css/style.css">
 </head>
 <style>
 * {
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Slideshow container */
@@ -176,7 +180,7 @@
 
 .boxtitle {
     padding: 10px;
-    background-color: aqua;
+    background-color: greenyellow;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-left: 1px #ccc solid;
@@ -225,14 +229,17 @@
     float: left;
     width: 32%;
     min-height: 300px;
-    border: 1px solid red;
+    border: 1px solid gray;
     border-radius: 3px;
     margin-bottom: 20px;
+    flex: 1;
+    text-align: center;
 }
 
 .boxsp .img {
     min-height: 220px;
     text-align: center;
+    flex-shrink: 0;
 }
 
 .img img {
@@ -254,14 +261,14 @@
 .menu ul li a {
     color: green;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     transition: 0.5s;
 }
 
 .menu ul li a:hover {
     color: orange;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 /* box taikhoan */
@@ -401,6 +408,15 @@
 .formdsloai table td {
     padding: 10px 20px;
     border: 1px solid #ccc;
+}
+
+.spct {
+    text-align: center;
+}
+
+.spct img {
+    width: 50%;
+    object-fit: cover;
 }
 </style>
 
