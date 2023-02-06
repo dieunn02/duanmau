@@ -87,10 +87,11 @@ if(isset($_GET['act'])){
             break;
         // xoasp
         case 'xoasp':
-            if(isset($_GET['id)'])&& ($_GET['id'] > 0)){
+            if(isset($_GET['id'])&& ($_GET['id'] > 0)){
+                // var_dump($_GET['id']);
                 delete_sanpham($_GET['id']);
             }
-            $listsanpham = loadall_sanpham("",0);
+            $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
             break;
         // suasp
