@@ -12,6 +12,11 @@ function loadall_sanpham_home(){
     $listsanpham =  pdo_query($sql);
     return $listsanpham;
 }
+function loadall_sanpham_top10(){
+    $sql = "SELECT * FROM sanpham WHERE 1 ORDER BY luotxem DESC LIMIT 0,10" ; 
+    $listsanpham =  pdo_query($sql);
+    return $listsanpham;
+}
 function loadall_sanpham($kyw="",$iddm=0){
     $sql = "SELECT * FROM sanpham WHERE 1 " ; 
     if($kyw != "" ){

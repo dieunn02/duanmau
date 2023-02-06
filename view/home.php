@@ -94,12 +94,6 @@
                         echo '<li><a href=" '.$linkdm.' ">'.$name.'</a></li>';
                     }
 ?>
-                    <!-- <li><a href="#">Dong Ho</a></li>
-                    <li><a href="#">Dong Ho</a></li>
-                    <li><a href="#">Dong Ho</a></li>
-                    <li><a href="#">Dong Ho</a></li>
-                    <li><a href="#">Dong Ho</a></li>
-                    <li><a href="#">Dong Ho</a></li> -->
                 </ul>
             </div>
             <div class="boxfooter searchbox">
@@ -111,34 +105,22 @@
         <div class="row">
             <div class="boxtitle">TOP 10 YEU THICH</div>
             <div class="row boxcontent">
-                <div class="row mb10 top10">
+                <?php
+                foreach ($dstop10 as $sp) {
+                    extract($sp);
+                    $linksp="index.php?act=sanphamct&idsp=".$id;
+                    $img = $img_path.$img;
+                    echo '<div class="row mb10 top10">
+                    <img src=" '.$img.' " alt="">
+                    <a href=" '.$linksp.' ">'.$name.'</a>
+                </div>';
+                }
+                ?>
+                <!-- <div class="row mb10 top10">
                     <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
                     <a href="#">Dua Hau</a>
                 </div>
-                <div class="row mb10 top10">
-                    <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
-                    <a href="#">Ca Rot</a>
-                </div>
-                <div class="row mb10 top10">
-                    <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
-                    <a href="#">Su hao</a>
-                </div>
-                <div class="row mb10 top10">
-                    <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
-                    <a href="#">Xoai</a>
-                </div>
-                <div class="row mb10 top10">
-                    <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
-                    <a href="#">Chuoi</a>
-                </div>
-                <div class="row mb10 top10">
-                    <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
-                    <a href="#">Mang cut</a>
-                </div>
-                <div class="row mb10 top10">
-                    <img src="https://i.pinimg.com/564x/8a/b1/4f/8ab14fbf4197a43543fa6604e11186db.jpg" alt="">
-                    <a href="#">Dua Hau</a>
-                </div>
+                -->
             </div>
         </div>
     </div>
