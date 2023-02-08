@@ -30,10 +30,15 @@ function loadall_sanpham($kyw="",$iddm=0){
     return $listsanpham;
 }
 function load_ten_dm($iddm){
-    $sql = "SELECT * FROM danhmuc WHERE id=".$iddm;
-    $dm = pdo_query_one($sql);
-    extract($dm);
-    return $name;
+    if($iddm > 0 ) {
+        $sql = "SELECT * FROM danhmuc WHERE id=".$iddm;
+        $dm = pdo_query_one($sql);
+        extract($dm);
+        return $name;
+    }else{
+        return "";
+    }
+
 }
 function loadone_sanpham($id){
     $sql = "SELECT * FROM sanpham WHERE id=".$id;

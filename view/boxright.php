@@ -35,8 +35,9 @@
         </ul>
     </div>
     <div class="boxfooter searchbox">
-        <form action="#" method="post">
-            <input type="text">
+        <form action="index.php?act=sanpham" method="post">
+            <input type="text" name="kyw">
+            <input type=" submit" name="timkiem" value="Tim Kiem">
         </form>
     </div>
 </div>
