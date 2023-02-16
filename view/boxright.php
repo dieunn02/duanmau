@@ -17,8 +17,8 @@
                 <input type="submit" value="Dang Nhap">
             </div>
         </form>
-        <li><a href="#">Quen Mat Khau</a></li>
-        <li><a href="#">Dang Ki thanh vien</a></li>
+        <li><a href="#">Quên mật khẩu</a></li>
+        <li><a href="index.php?act=dangky">Đăng ký thành viên</a></li>
     </div>
 </div>
 <div class="row mb">

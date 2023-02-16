@@ -4,6 +4,7 @@ include 'model/sanpham.php';
 include 'model/danhmuc.php';
 include 'view/header.php';
 include 'global.php';
+include 'model/taikhoan.php';
 
 $spnew = loadall_sanpham_home();
 $dsdm = loadall_danhmuc();
@@ -37,6 +38,20 @@ if((isset($_GET['act'])) && ($_GET['act']!= "")){
                 include 'view/home.php';
             }
             break;
+            
+        case 'dangky':
+            if(isset($_POST['dangky']) && ($_POST['dangky'] >0 )){
+                $email = $_POST['email'];
+                $user = $_POST['user'];
+                $pass = $_POST['pass'];
+                insert_taikhoan($email,$user,$password);
+                $thongbao = "Đã insert thành công ! Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng .";
+            }
+            include 'view/taikhoan/dangky.php';
+            break;
+        case 'gioithieu':
+                include 'view/gioithieu.php';
+                break;
         case 'lienhe':
             include 'view/lienhe.php';
             break;

@@ -277,6 +277,7 @@ a {
 }
 
 .formtaikhoan input[type="text"],
+.formtaikhoan input[type="email"],
 .formtaikhoan input[type="password"],
 .formcontent input[type="text"] {
     width: 100%;
@@ -292,6 +293,7 @@ a {
 .formtaikhoan input[type="submit"],
 .formcontent input[type="submit"],
 .formcontent input[type="reset"],
+.formtaikhoan input[type="reset"],
 .formcontent input[type="button"] {
     border: 1px solid #ccc;
     background-color: white;
@@ -417,6 +419,10 @@ a {
 .spct img {
     width: 50%;
     object-fit: cover;
+}
+
+.thongbao {
+    color: red;
 }
 </style>
 
