@@ -38,13 +38,23 @@ if((isset($_GET['act'])) && ($_GET['act']!= "")){
                 include 'view/home.php';
             }
             break;
-            
+        // dangky  
         case 'dangky':
             if(isset($_POST['dangky']) && ($_POST['dangky'] >0 )){
                 $email = $_POST['email'];
                 $user = $_POST['user'];
                 $pass = $_POST['pass'];
-                insert_taikhoan($email,$user,$password);
+                insert_taikhoan($email,$user,$pass);
+                $thongbao = "Đã insert thành công ! Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng .";
+            }
+            include 'view/taikhoan/dangky.php';
+            break;
+        // dangnhap
+        case 'dangnhap':
+            if(isset($_POST['dangnhap']) && ($_POST['dangnhap'] >0 )){
+                $user = $_POST['user'];
+                $pass = $_POST['pass'];
+                insert_taikhoan($email,$user,$pass);
                 $thongbao = "Đã insert thành công ! Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng .";
             }
             include 'view/taikhoan/dangky.php';

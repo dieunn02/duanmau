@@ -17,7 +17,7 @@
                         <input type="password" name="pass" value="">
                     </div>
                     <div class="row mb10">
-                        <input type="submit" name="" value="Đăng ký" name="dangky">
+                        <input type="submit" value="Đăng ký" name="dangky">
                         <input type="reset" name="" value="Nhập lại">
                     </div>
                 </form>

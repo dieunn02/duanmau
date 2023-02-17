@@ -1,20 +1,20 @@
 <div class="row mb">
     <div class="boxtitle">TAi KHOAN</div>
     <div class="boxcontent formtaikhoan">
-        <form action="#" method="post">
+        <form action="index.php?act=dangnhap" method="post">
             <div class="row mb">
-                Ten dang nhap : <br>
+                Tên đăng nhập : <br>
                 <input type="text" name="user" id="">
             </div>
             <div class="row mb">
-                Mat khau : <br>
+                Mật khẩu : <br>
                 <input type="password" name="pass" id="">
             </div>
             <div class="row mb">
-                <input type="checkbox" name="" id="">Ghi nho tai khoan ?
+                <input type="checkbox" name="" id="">Ghi nhớ tài khoản ?
             </div>
             <div class="row mb">
-                <input type="submit" value="Dang Nhap">
+                <input type="submit" value="Đăng nhập" name="dangnhap">
             </div>
         </form>
         <li><a href="#">Quên mật khẩu</a></li>
@@ -22,7 +22,7 @@
     </div>
 </div>
 <div class="row mb">
-    <div class="boxtitle">DANH MUC</div>
+    <div class="boxtitle">DANH MỤC</div>
     <div class="boxcontent2 menudoc">
         <ul>
             <?php 
@@ -37,12 +37,12 @@
     <div class="boxfooter searchbox">
         <form action="index.php?act=sanpham" method="post">
             <input type="text" name="kyw">
-            <input type=" submit" name="timkiem" value="Tim Kiem">
+            <input type="submit" name="timkiem" value="Tim Kiem">
         </form>
     </div>
 </div>
 <div class="row">
-    <div class="boxtitle">TOP 10 YEU THICH</div>
+    <div class="boxtitle">TOP 10 YÊU THÍCH</div>
     <div class="row boxcontent">
         <?php
                 foreach ($dstop10 as $sp) {
