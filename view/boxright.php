@@ -1,6 +1,23 @@
 <div class="row mb">
     <div class="boxtitle">TAi KHOAN</div>
     <div class="boxcontent formtaikhoan">
+        <?php
+        if(isset($_SESSION['user'])){
+            extract($_SESSION['user']);
+        ?>
+        <div class="row mb">
+            Xin chào : <br>
+            <?=$user ?>
+        </div>
+        <div class="row mb">
+            <li><a href="index.php?act=quenmk">Quên mật khẩu</a></li>
+            <li><a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a></li>
+            <li><a href="admin/index.php">Đăng nhập admin</a></li>
+            <li><a href="index.php?act=thoat">Thoát</a></li>
+        </div>
+        <?php 
+             }else{   
+         ?>
         <form action="index.php?act=dangnhap" method="post">
             <div class="row mb">
                 Tên đăng nhập : <br>
@@ -19,6 +36,7 @@
         </form>
         <li><a href="#">Quên mật khẩu</a></li>
         <li><a href="index.php?act=dangky">Đăng ký thành viên</a></li>
+        <?php }?>
     </div>
 </div>
 <div class="row mb">
@@ -54,6 +72,6 @@
                     <a href=" '.$linksp.' ">'.$name.'</a>
                 </div>';
                 }
-                ?>
+        ?>
     </div>
 </div>

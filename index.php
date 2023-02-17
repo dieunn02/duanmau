@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'model/pdo.php';
 include 'model/sanpham.php';
 include 'model/danhmuc.php';
@@ -51,17 +52,23 @@ if((isset($_GET['act'])) && ($_GET['act']!= "")){
             break;
         // dangnhap
         case 'dangnhap':
-            if(isset($_POST['dangnhap']) && ($_POST['dangnhap'] >0 )){
+            if (isset($_POST['dangnhap'])) {
                 $user = $_POST['user'];
-                $pass = $_POST['pass'];
-                insert_taikhoan($email,$user,$pass);
-                $thongbao = "Đã insert thành công ! Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng .";
+                $password = $_POST['password'];
+                $checkuser = checkuser($user, $pass);
+                if (is_array($checkuser)) {
+                    $_SESSION['user'] = $checkuser;
+                    // $thongbao = "Đăng nhập thành công !";
+                    header('Location: index.php');
+                } else {
+                    $thongbao = "tài khoản không tồn tại! vui lòng kiểm tra lại !";
+                }
             }
-            include 'view/taikhoan/dangky.php';
+            include "view/taikhoan/dangky.php";
             break;
         case 'gioithieu':
-                include 'view/gioithieu.php';
-                break;
+              include 'view/gioithieu.php';
+              break;
         case 'lienhe':
             include 'view/lienhe.php';
             break;
