@@ -97,7 +97,12 @@ if((isset($_GET['act'])) && ($_GET['act']!= "")){
             }
             include "view/taikhoan/quenmk.php";
             break;
-        // 
+        // thoat
+        case 'thoat':
+            session_unset();
+            header('Location: index.php');
+            break;
+            /* thêm giỏ hàng*/
         case 'gioithieu':
               include 'view/gioithieu.php';
               break;
