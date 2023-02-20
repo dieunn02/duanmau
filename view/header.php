@@ -6,70 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dự Án Mẫu</title>
-    <link rel="stylesheet" href="../view/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
 * {
     box-sizing: border-box;
+    font-family: Nunito;
 }
 
 a {
     text-decoration: none;
 }
 
-/* Slideshow container */
+
+
+/*  Slideshow*/
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 1240px;
     position: relative;
     margin: auto;
 }
 
-/* Hide the images by default */
 .mySlides {
     display: none;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Number text (1/3 etc) */
 .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -78,7 +41,6 @@ a {
     top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
     height: 15px;
@@ -95,7 +57,6 @@ a {
     background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -113,7 +74,7 @@ a {
 
 /* het slideshow */
 .boxcenter {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -229,15 +190,16 @@ a {
     float: left;
     width: 32%;
     min-height: 300px;
-    border: 1px solid gray;
+    border: 1px solid #ccc;
     border-radius: 3px;
     margin-bottom: 20px;
     flex: 1;
     text-align: center;
+    padding: 15px 10px;
 }
 
 .boxsp .img {
-    min-height: 220px;
+    min-height: 200px;
     text-align: center;
     flex-shrink: 0;
 }
@@ -245,6 +207,11 @@ a {
 .img img {
     height: 200px;
     width: 100%;
+}
+
+.img img:hover {
+    transform: rotate(10deg);
+    overflow: hidden;
 }
 
 /* menu */
@@ -347,6 +314,10 @@ a {
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid #ccc;
+}
+
+.footer {
+    overflow: hidden;
 }
 
 /* Top10 */
