@@ -16,11 +16,11 @@
         </div>
         <div class="row mb menu">
             <ul>
-                <li><a href="index.php">Trang Chu</a></li>
-                <li><a href="index.php?act=adddm">Danh Muc</a></li>
-                <li><a href="index.php?act=addsp">Hang Hoa</a></li>
-                <li><a href="index.php?act=dskh">Khach hang</a></li>
-                <li><a href="index.php?act=dsbl">Binh luan</a></li>
-                <li><a href="index.php?act=thongke">Thong ke</a></li>
+                <li><a href="index.php">Trang Chủ</a></li>
+                <li><a href="index.php?act=adddm">Danh Mục</a></li>
+                <li><a href="index.php?act=addsp">Hàng Hóa</a></li>
+                <li><a href="index.php?act=dskh">Khách hàng</a></li>
+                <li><a href="index.php?act=dsbl">Bình luận</a></li>
+                <li><a href="index.php?act=thongke">Thống kê</a></li>
             </ul>
         </div>

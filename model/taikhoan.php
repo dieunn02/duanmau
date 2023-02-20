@@ -17,4 +17,9 @@ function checkemail($email){
     $sp =  pdo_query_one($sql);
     return $sp;
 }
+function loadall_taikhoan(){
+    $sql="SELECT * FROM taikhoan ORDER BY id DESC";
+    $listtaikhoan=pdo_query($sql);
+    return $listtaikhoan;
+}
 ?>
