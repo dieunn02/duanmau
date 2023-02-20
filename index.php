@@ -106,15 +106,15 @@ if((isset($_GET['act'])) && ($_GET['act']!= "")){
             header('Location: index.php');
             break;
             /* thêm giỏ hàng*/
-            case 'addtocart':
+        case 'addtocart':
                 if (isset($_POST['addtocart'])) {
                     $id = $_POST['id'];
                     $name = $_POST['name'];
-                    $image = $_POST['image'];
+                    $img = $_POST['img'];
                     $price = $_POST['price'];
                     $soluong = 1;
                     $thanhtien = $soluong * $price;
-                    $spadd = [$id, $name, $image, $price, $soluong, $thanhtien];
+                    $spadd = [$id, $name, $img, $price, $soluong, $thanhtien];
                     array_push($_SESSION['mycart'], $spadd);
                 }
                 include "view/cart/viewcart.php";
