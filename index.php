@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 include 'model/pdo.php';
 include 'model/sanpham.php';
@@ -54,7 +55,7 @@ if((isset($_GET['act'])) && ($_GET['act']!= "")){
         case 'dangnhap':
             if (isset($_POST['dangnhap'])) {
                 $user = $_POST['user'];
-                $password = $_POST['password'];
+                $pass = $_POST['pass'];
                 $checkuser = checkuser($user, $pass);
                 if (is_array($checkuser)) {
                     $_SESSION['user'] = $checkuser;
@@ -66,6 +67,24 @@ if((isset($_GET['act'])) && ($_GET['act']!= "")){
             }
             include "view/taikhoan/dangky.php";
             break;
+            
+        // edit_taikhoan
+        case 'edit_taikhoan':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])){
+                $user = $_POST['user'];
+                $pass = $_POST['pass'];
+                $email = $_POST['email'];
+                $address = $_POST['address'];
+                $tel = $_POST['tel'];
+                $id = $_POST['id'];
+                update_taikhoan($id, $user, $pass, $email, $address, $tel);
+                $_SESSION['user'] = checkuser($user, $pass);
+                 header('location: index.php?act=edit_taikhoan');
+                
+            }
+            include "view/taikhoan/edit_taikhoan.php";
+            break;
+        // 
         case 'gioithieu':
               include 'view/gioithieu.php';
               break;
