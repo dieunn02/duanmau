@@ -7,6 +7,9 @@ include 'model/danhmuc.php';
 include 'view/header.php';
 include 'global.php';
 include 'model/taikhoan.php';
+// include 'model/cart.php';
+
+if (!isset($_SESSION['mycart']))  $_SESSION['mycart'] = [];
 
 $spnew = loadall_sanpham_home();
 $dsdm = loadall_danhmuc();
@@ -103,6 +106,27 @@ if((isset($_GET['act'])) && ($_GET['act']!= "")){
             header('Location: index.php');
             break;
             /* thêm giỏ hàng*/
+            case 'addtocart':
+                if (isset($_POST['addtocart'])) {
+                    $id = $_POST['id'];
+                    $name = $_POST['name'];
+                    $image = $_POST['image'];
+                    $price = $_POST['price'];
+                    $soluong = 1;
+                    $thanhtien = $soluong * $price;
+                    $spadd = [$id, $name, $image, $price, $soluong, $thanhtien];
+                    array_push($_SESSION['mycart'], $spadd);
+                }
+                include "view/cart/viewcart.php";
+                break;
+            case 'delcart':
+                if (isset($_GET['idcart'])) {
+                    array_slice($_SESSION['mycart'], $_GET['idcart'], 1);
+                } else {
+                    $_SESSION['mycart'] = [];
+                }
+                header('Location: index.php?act=viewcart');
+                break;
         case 'gioithieu':
               include 'view/gioithieu.php';
               break;
