@@ -84,6 +84,19 @@ if((isset($_GET['act'])) && ($_GET['act']!= "")){
             }
             include "view/taikhoan/edit_taikhoan.php";
             break;
+        // quenmk
+        case 'quenmk':
+            if (isset($_POST['guiemail'])) {
+                $email = $_POST['email'];
+                $checkemail = checkemail($email);
+                if (is_array($checkemail)) {
+                    $thongbao = "mật khẩu của bạn là :" . $checkemail['pass'];
+                } else {
+                    $thongbao = "Email không tồn tại !";
+                }
+            }
+            include "view/taikhoan/quenmk.php";
+            break;
         // 
         case 'gioithieu':
               include 'view/gioithieu.php';
