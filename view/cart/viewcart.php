@@ -14,28 +14,28 @@
                     </tr>
 
                     <?php
-                    $tong =0;
-                    $i=0;
+                    $tong = 0;
+                    $i = 0;
                     foreach ($_SESSION['mycart'] as $cart) {
-                        $hinh = $img_path.$cart[2];
+                        $hinh = $img_path . $cart[2];
                         $thanhtien = $cart[3] * $cart[4];
                         $tong = $tong + $thanhtien;
-                        $xoasp = '<a href="index.php?act=delcart$idcart='.$i.'"><input type="button" name="" value="Xóa"></a>';
-                        
+                        $xoasp = '<a href="index.php?act=delcart&idcart=' . $i . '"><input type="button" name="" value="Xóa"></a>';
+
                         echo '<tr>
                                     <td>1</td>
-                                    <td><img src="'.$hinh.'" alt="" height="80px"></td>
-                                    <td>'.$cart[1].'</td>
-                                    <td>'.$cart[3].'</td>
-                                    <td>'.$cart[4].'</td>
-                                    <td>'.$thanhtien.'</td>
-                                    <td>'.$xoasp.'</td>
-                                </tr>'; 
-                                $i+=1;
+                                    <td><img src="' . $hinh . '" alt="" height="80px"></td>
+                                    <td>' . $cart[1] . '</td>
+                                    <td>' . $cart[3] . '</td>
+                                    <td>' . $cart[4] . '</td>
+                                    <td>' . $thanhtien . '</td>
+                                    <td>' . $xoasp . '</td>
+                                </tr>';
+                        $i += 1;
                     }
                     echo '<tr>
                                 <td colspan="4">Tổng đơn hàng</td>
-                                <td>'.$tong.'</td>
+                                <td>' . $tong . '</td>
                                 <td></td>
                             </tr>';
                     ?>
