@@ -29,4 +29,3 @@
         <?php include "view/boxright.php"; ?>
     </div>
 </div>
-<!-- </div> -->

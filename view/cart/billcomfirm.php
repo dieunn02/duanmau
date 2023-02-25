@@ -1,6 +1,4 @@
 <?php 
-var_dump($_POST);
-die();
 ?><div class="row">
     <div class="row mb">
         <div class="boxtrai mr">
@@ -15,16 +13,15 @@ die();
                 }
                  ?>
                 <div class="row mb">
-                    <div class="boxtitle">Mã đơn hàng</div>
+                    <div class="boxtitle">Thông tin đơn hàng</div>
                     <div class="row boxcontent" style="text-align : center ">
-                        <h3>Cảm ơn quý khách đã đặt hàng</h3>
-                    </div>
-                    <div class="row mb">
-                        <div class="boxtitle">Thông tin đơn hàng</div>
                         <li> MÃ - <?= $bill['id']; ?></li>
                         <li> -Ngày đặt hàng - <?= $bill['ngaydathang']; ?></li>
                         <li> -Tổng đơn hàng - <?= $bill['total']; ?></li>
                         <li> -Phương thức thanh toán - <?= $bill['bill_pttt']; ?></li>
+                    </div>
+                    <div class="row mb">
+                        <div class="boxtitle">Thông tin đặt hàng</div>
                         <div class="row boxcontent billform">
                             <table>
                                 <tr>
@@ -51,14 +48,14 @@ die();
                         <div class="boxtitle">Chi tiết giỏ hàng</div>
                         <div class="row boxcontent cart">
                             <table>
-                                <tr>
+                                <!-- <tr>
                                     <th>STT</th>
                                     <th>Hình</th>
                                     <th>Sản phẩm</th>
                                     <th>Đơn giá</th>
                                     <th>Số lượng</th>
                                     <th>Thành tiền</th>
-                                </tr>
+                                </tr> -->
 
                                 <?php
                                bill_chi_tiet($billct);
@@ -67,10 +64,10 @@ die();
                         </div>
                     </div>
 
-                    <div class="row mb bill">
+                    <!-- <div class="row mb bill">
                         <a href="index.php?act=bill"><input type="button" value="Đồng ý đặt hàng"
                                 name="dongydathang"></a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class=" boxphai">
                     <?php include "view/boxright.php"; ?>

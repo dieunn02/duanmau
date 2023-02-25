@@ -139,24 +139,25 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'billcomfirm':
             // taobill
             if (isset($_POST['dongydathang']) && ($_POST['dongydathang'])) {
-                $name=$_POST['name'];
-                $email=$_POST['email'];
-                $address=$_POST['address'];
-                $tel=$_POST['tel'];
-                $pttt=$_POST['pttt'];
-                $ngaydathang=date('h:i:sa d/m/Y');
-                $tongdonhang=tongdonhang();
-                $idbill =  insert_bill($name,$email,$address,$pttt,$tel,$ngaydathang,$tongdonhang);
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $address = $_POST['address'];
+                $tel = $_POST['tel'];
+                $pttt = $_POST['pttt'];
+                $ngaydathang = date('h:i:sa d/m/Y');
+                $tongdonhang = tongdonhang();
+                // taobill
+                $idbill = insert_bill($name, $email, $address,  $tel,$pttt, $ngaydathang, $tongdonhang);
                 // insert into cart : $session['mycart'] & idbill
-                foreach($_SESSION['mycart'] as $cart ){
-                    insert_cart($_SESSION['user']['id'] , $cart[0] , $cart[2] , $cart[1] , $cart[3] , $cart[4] , $cart[5] , $idbill );
+                foreach ($_SESSION['mycart'] as $cart) {
+                    insert_cart($_SESSION['user']['id'], $cart[0], $cart[2], $cart[1], $cart[3], $cart[4], $cart[5], $idbill);
                 }
                 // xóa session cart
-                $_SESSION['cart']  = [];
+                $_SESSION['cart'] = [];
             }
             $bill = loadone_bill($idbill);
-            $billct = loadone_cart($idbill);
-            include "view/cart/bill.php";
+            $billct = loadall_cart($idbill);
+            include "view/cart/billcomfirm.php";
             break;
         case 'mybill':
             include "view/cart/mybill.php";
