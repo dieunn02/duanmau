@@ -7,6 +7,8 @@ include 'model/danhmuc.php';
 include 'view/header.php';
 include 'global.php';
 include 'model/taikhoan.php';
+include 'model/cart.php';
+
 // include 'model/cart.php';
 
 if (!isset($_SESSION['mycart']))
@@ -131,8 +133,39 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'viewcart':
             include './view/cart/viewcart.php';
             break;
+        case 'bill':
+            include "view/cart/bill.php";
+            break;
+        case 'billcomfirm':
+            // taobill
+            if (isset($_POST['dongydathang']) && ($_POST['dongydathang'])) {
+                $name=$_POST['name'];
+                $email=$_POST['email'];
+                $address=$_POST['address'];
+                $tel=$_POST['tel'];
+                $pttt=$_POST['pttt'];
+                $ngaydathang=date('h:i:sa d/m/Y');
+                $tongdonhang=tongdonhang();
+                $idbill =  insert_bill($name,$email,$address,$pttt,$tel,$ngaydathang,$tongdonhang);
+                // insert into cart : $session['mycart'] & idbill
+                foreach($_SESSION['mycart'] as $cart ){
+                    insert_cart($_SESSION['user']['id'] , $cart[0] , $cart[2] , $cart[1] , $cart[3] , $cart[4] , $cart[5] , $idbill );
+                }
+                // xóa session cart
+                $_SESSION['cart']  = [];
+            }
+            $bill = loadone_bill($idbill);
+            $billct = loadone_cart($idbill);
+            include "view/cart/bill.php";
+            break;
+        case 'mybill':
+            include "view/cart/mybill.php";
+            break;
         case 'gioithieu':
             include 'view/gioithieu.php';
+            break;
+        case 'thongke':
+            include "view/lienhe.php";
             break;
         case 'lienhe':
             include 'view/lienhe.php';

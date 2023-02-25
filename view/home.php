@@ -1,39 +1,6 @@
 <div class="row mb ">
     <div class="boxtrai mr">
         <div class="row">
-            <div class="banner">
-                <!-- Slideshow container -->
-                <div class="slideshow-container">
-                    <!-- Full-width images with number and caption text -->
-                    <div class="mySlides fade">
-                        <div class="numbertext">1 / 3</div>
-                        <img src="view/images/banner01.jpg" style="width:100%">
-                        <div class="text">Caption Text</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">2 / 3</div>
-                        <img src="view/images/banner02.jpg" style="width:100%">
-                        <div class="text">Caption Two</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">3 / 3</div>
-                        <img src="view/images/banner03.jpg" style="width:100%">
-                        <div class="text">Caption Three</div>
-                    </div>
-                </div>
-                <br>
-
-                <!-- The dots/circles -->
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
-            </div>
-        </div>
-        <div class="row">
             <?php
             $i = 0;
             foreach ($spnew as $sp) {
@@ -57,7 +24,7 @@
                                 <input type="hidden" name="name" value="' . $name . '">
                                 <input type="hidden" name="img" value="' . $img . '">
                                 <input type="hidden" name="price" value="' . $price . '">
-                                <input type="submit" name="addtocart" value="Thêm vào giỏ hàng">
+                                <input type="submit" name="addtocart" value="Add to cart" class="btn1">
                             </form>
                             </div>
         </div>';
