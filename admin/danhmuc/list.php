@@ -1,32 +1,32 @@
 <div class="row">
     <div class="row formtitle">
-        <h1>Quan ly hang hoa</h1>
+        <h1>Quản lý hàng hóa</h1>
     </div>
     <div class="row formcontent">
         <div class="row mb10 formdsloai">
             <table>
                 <tr>
                     <th></th>
-                    <th>Ma Loai</th>
-                    <th>Ten Loai</th>
+                    <th>Mã Loại</th>
+                    <th>Tên Loại</th>
                     <th></th>
                 </tr>
-                <?php 
-                    foreach ($listdanhmuc as $danhmuc){
+                <?php
+                foreach ($listdanhmuc as $danhmuc) {
                     extract($danhmuc);
                     $suadm = "index.php?act=suadm&id=" . $id;
                     $xoadm = "index.php?act=xoadm&id=" . $id;
                     echo '<tr>
                         <td><input type="checkbox"></td>
-                        <td>'.$id.'</td>
-                        <td>'.$name.'</td>
+                        <td>' . $id . '</td>
+                        <td>' . $name . '</td>
                         <td>
-                            <a href="'.$suadm.'"><input type="button" value="Sua"></a>    
-                            <a href="'.$xoadm.'"><input type="button" value="Xoa"></a>  
+                            <a href="' . $suadm . '"><input type="button" value="Sửa"></a>    
+                            <a href="' . $xoadm . '"><input type="button" value="Xoá"></a>  
                         </td>
                     </tr>';
-                    }
-                 ?>
+                }
+                ?>
             </table>
         </div>
         <div class="row mb10">

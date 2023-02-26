@@ -53,9 +53,6 @@
                     </tr>';
                     }
                  ?>
-                if(!empty($name) && !empty($hinh) && !empty($price) && !empty($luotxem)){
-                echo "<br>";
-
                 }
             </table>
         </div>

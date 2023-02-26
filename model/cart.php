@@ -90,9 +90,9 @@ function tongdonhang()
     }
     return $tong;
 }
-function insert_bill($name, $email, $address,  $tel,$pttt, $ngaydathang, $tongdonhang)
+function insert_bill( $iduser ,$name, $email, $address,  $tel,$pttt, $ngaydathang, $tongdonhang)
 {
-    $sql = "INSERT INTO bill(bill_name,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,total) VALUES ('$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
+    $sql = "INSERT INTO bill(iduser ,bill_name,bill_email,bill_address,bill_tel,bill_pttt,ngaydathang,total) VALUES ('$iduser',$name','$email','$address','$tel','$pttt','$ngaydathang','$tongdonhang')";
     return pdo_execute_return_lastInsertId($sql);
 }
 function insert_cart($iduser, $idpro, $img, $name, $price, $soluong, $thanhtien, $idbill)
@@ -100,6 +100,7 @@ function insert_cart($iduser, $idpro, $img, $name, $price, $soluong, $thanhtien,
     $sql = "INSERT INTO cart(iduser,idpro,img,name,price,soluong,thanhtien,idbill) VALUES ('$iduser','$idpro','$img','$name','$price','$soluong','$thanhtien','$idbill')";
     return pdo_execute($sql);
 }
+
 function loadone_bill($id)
 {
     $sql = "SELECT * FROM bill WHERE id=" . $id;
@@ -112,3 +113,56 @@ function loadall_cart($idbill)
     $bill = pdo_query($sql);
     return $bill;
 }
+function loadall_cart_count($idbill)
+{
+    $sql = "SELECT * FROM  cart WHERE  idbill=" . $idbill;
+    $bill = pdo_query($sql);
+    return sizeof($bill);
+}
+// function loadall_bill($iduser)
+// {
+//     $sql = "SELECT * FROM bill WHERE iduser=" . $iduser;
+//     $listbill = pdo_query($sql);
+//     return $listbill;
+// }
+function loadall_bill($kyw = "" , $iduser=0)
+{
+    $sql = "SELECT * FROM bill WHERE 1 ";
+    if($iduser > 0) $sql.= "AND iduser = ".$iduser ;
+    if($kyw != "" ) $sql.= "AND id like '%".$kyw. "%' ";
+    $sql.= "order by id desc";
+    $listbill = pdo_query($sql);
+    return $listbill;
+}
+function get_ttdh($n){
+    switch($n){
+        case '0':
+            $tt = "Đơn hàng mới";
+            break;
+        
+        case '1':
+            $tt = "Đang xử lí";
+            break;
+        
+        case '2':
+            $tt = "Đang giao hàng";
+            break;
+        
+        case '3':
+            $tt = "Hoàn tất";
+            break;
+        
+        default:
+        $tt = "Đơn hàng đang trong quá trình xác nhận ";
+        break;
+    }
+    return $tt;
+}
+function loadall_thongke(){
+    $sql = "SELECT danhmuc.id as madm , danhmuc.name as tendm , count(sanpham.id) as countsp , min(sanpham.price) as minprice, max(sanpham.price) as maxprice , avg(sanpham.price) as avgprice ";
+    $sql .= "FROM  sanpham left join danhmuc on danhmuc.id = sanpham.iddm ";
+    $sql.= "group by danhmuc.id order by danhmuc.id desc";
+    $listtk = pdo_query($sql);
+    return $listtk;
+}
+?>

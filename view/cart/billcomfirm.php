@@ -63,11 +63,6 @@
                             </table>
                         </div>
                     </div>
-
-                    <!-- <div class="row mb bill">
-                        <a href="index.php?act=bill"><input type="button" value="Đồng ý đặt hàng"
-                                name="dongydathang"></a>
-                    </div> -->
                 </div>
                 <div class=" boxphai">
                     <?php include "view/boxright.php"; ?>

@@ -13,7 +13,7 @@
             <div class="row mb10">
                 <input type="submit" name="themmoi" value="Thêm Mới">
                 <input type="reset" value="Nhập Lại">
-                <a href="index.php?act=listdm">
+                <a href=" index.php?act=listdm">
                     <input type="button" value="Danh Sách">
                 </a>
             </div>
