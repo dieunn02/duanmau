@@ -13,25 +13,25 @@
                     <th>Giá thấp nhất</th>
                     <th>Giá trung bình</th>
                 </tr>
-                <?php 
-                foreach ($listthongke as $thongke){
-                    extract ($thongke);
+                <?php
+                foreach ($listthongke as $thongke) {
+                    extract($thongke);
                     echo ' <tr>
-                    <td>'.$madm.'</td>
-                    <td>'.$tendm.'</td>
-                    <td>'.$countsp.'</td>
-                    <td>'.$maxprice.'</td>
-                    <td>'.$minprice.'</td>
-                    <td>'.$avgprice.'</td>
+                    <td>' . $madm . '</td>
+                    <td>' . $tendm . '</td>
+                    <td>' . $countsp . '</td>
+                    <td>' . $maxprice . '</td>
+                    <td>' . $minprice . '</td>
+                    <td>' . $avgprice . '</td>
                 </tr>';
                 }
-                
+
                 ?>
 
             </table>
         </div>
         <div class="row mb10">
-            <a href="index.php?act=bieudo"><input type="button" value="Xem biểu đồ"></a>
+            <a href="index.php?act=bieudo"><input type="submit" value="Xem biểu đồ"></a>
         </div>
     </div>
 </div>
