@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dfe0cc23-d677-4c9b-aedc-72e1524714bf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/admin/danhmuc/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/danhmuc/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/sanpham/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/sanpham/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/sanpham/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/sanpham/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/pdo.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/pdo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/boxright.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/boxright.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/danhmuc.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/danhmuc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/regiser.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/regiser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/sanpham.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/sanpham.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/js/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/taikhoan/dangky.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/taikhoan/dangky.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/taikhoan/edit_taikhoan.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/taikhoan/edit_taikhoan.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1">
+    <include_path>
+      <path value="/usr/share/php" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2MEv01FCYHEqN20yaLYSQfWufhZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dieu/WebstormProjects/duanmau&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dfe0cc23-d677-4c9b-aedc-72e1524714bf" name="Changes" comment="" />
+      <created>1677345333794</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677345333794</updated>
+      <workItem from="1677345337338" duration="25000" />
+      <workItem from="1677345502517" duration="492000" />
+      <workItem from="1677346005962" duration="3191000" />
+      <workItem from="1677349386834" duration="4093000" />
+      <workItem from="1677353498431" duration="5464000" />
+      <workItem from="1677401953410" duration="599000" />
+      <workItem from="1677421541070" duration="3973000" />
+      <workItem from="1677493124357" duration="9292000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/model/pdo.php</url>
+          <line>5</line>
+          <properties>
+            <option name="className" value="" />
+            <option name="methodName" value="\pdo_get_connection" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/duanmau$pdo_php.dat" NAME="pdo.php Coverage Results" MODIFIED="1677353809390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
