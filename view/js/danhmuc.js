@@ -1,8 +1,9 @@
-let category = document.querySelector('.categoryName');
-
 function check() {
-    if (category.value.trim() == '') {
-        alert('Xin hãy nhập đủ thông tin');
+    let category = document.querySelector('#ten-loai');
+    console.log("Checking ...")
+    console.log(category.value)
+    if (category.value.trim() === '') {
+        alert('Ngốc quá đi');
         return false;
     }
     return true;

@@ -1,9 +1,10 @@
+<script src="../../view/js/sanpham.js"></script>
 <div class="row">
     <div class="row formtitle">
         <h1>THÊM MỚI SẢN PHẨM</h1>
     </div>
     <div class="row formcontent">
-        <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
+        <form action="index.php?act=addsp" method="post" enctype="multipart/form-data" onsubmit="return check()">
             <div class="row mb10">Danh mục<br>
                 <select name="iddm">
                     <?php 
@@ -15,16 +16,16 @@
                 </select>
             </div>
             <div class=" row mb10"> Tên sản phẩm<br>
-                <input type="text" name="tensp">
+                <input type="text" name="tensp" id="product-name">
             </div>
             <div class="row mb10">Giá<br>
-                <input type="text" name="giasp">
+                <input type="text" name="giasp" id="product-price">
             </div>
             <div class="row mb10">Hình ảnh<br>
-                <input type="file" name="hinh">
+                <input type="file" name="hinh" id="product-image">
             </div>
             <div class="row mb10">Mô tả<br>
-                <textarea rows="10" cols="30" name="mota"></textarea>
+                <textarea rows="10" cols="30" name="mota" id="product-description"></textarea>
             </div>
             <div class="row mb10">
                 <input type="submit" name="themmoi" value="Thêm Mới">

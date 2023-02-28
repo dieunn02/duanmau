@@ -1,18 +1,12 @@
-let email = document.getElementsByName('email')[0];
-let password = document.getElementsByName('password')[0];
-
 function check() {
-    if (email.value.trim() == '') {
+    console.log("Checking")
+    let tenDangNhap = document.querySelector("#ten-dang-nhap")
+    let password = document.querySelector("#mat-khau")
+    if (tenDangNhap.value.trim() === '') {
         alert('Chưa nhập tên đăng nhập');
         return false;
-    } else if (
-        email.value.trim().indexOf('.') == -1 ||
-        email.value.trim().indexOf('@') == -1
-    ) {
-        alert('Email không đúng định dạng');
-        return false;
     }
-    if (password.value.trim() == '') {
+    if (password.value.trim() === "") {
         alert('Chưa nhập mật khẩu');
         return false;
     }

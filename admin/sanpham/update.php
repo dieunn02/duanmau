@@ -9,12 +9,13 @@
                         $hinh = 'No photo';
                     }
 ?>
+<script src="../../view/js/sanpham.js"></script>
 <div class="row">
     <div class="row formtitle">
         <h1>CẬP NHẬT LOẠI HÀNG HÓA</h1>
     </div>
     <div class="row formcontent">
-        <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data">
+        <form action="index.php?act=updatesp" method="post" onsubmit="return checkUpdate()" enctype="multipart/form-data">
             <div class="row mb10">
                 <select name="iddm">
                     <option value="0" selected>Tất cả</option>
@@ -27,17 +28,17 @@
                 </select>
             </div>
             <div class="row mb10"> Tên sản phẩm<br>
-                <input type="text" name="tensp" value="<?= $name ?>">
+                <input type="text" name="tensp" value="<?= $name ?>" id="product-name">
             </div>
             <div class="row mb10">Giá<br>
-                <input type="text" name="giasp" value="<?= $price ?>">
+                <input type="text" name="giasp" value="<?= $price ?>" id="product-price">
             </div>
             <div class="row mb10">Hình ảnh<br>
-                <input type="file" name="hinh">
+                <input type="file" name="hinh" id="product-image">
                 <?= $hinh ?>
             </div>
             <div class="row mb10">Mô tả<br>
-                <textarea rows="10" cols="30" name="mota"><?= $mota ?></textarea>
+                <textarea rows="10" cols="30" id="product-description" name="mota"><?= $mota ?></textarea>
             </div>
             <div class="row mb10">
                 <input type="hidden" name="id" value="<?=$id?>">
